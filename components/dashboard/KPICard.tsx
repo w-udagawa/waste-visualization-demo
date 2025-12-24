@@ -80,7 +80,18 @@ export const KPICard: React.FC<KPICardProps> = ({
   };
 
   // 目標達成率を計算
-  const achievementRate = target ? (value / target) * 100 : null;
+  // 最終処分率と原単位は「低い方が良い」ので計算を反転
+  const calculateAchievementRate = (): number | null => {
+    if (!target) return null;
+    if (kpiType === 'finalDisposalRate' || kpiType === 'wasteIntensity') {
+      // 低い方が良いKPI: 目標値 / 実績値 × 100
+      // 例: 目標3%, 実績5.4% → 3/5.4*100 = 55.6%
+      return value > 0 ? (target / value) * 100 : 100;
+    }
+    // 高い方が良いKPI: 実績値 / 目標値 × 100
+    return (value / target) * 100;
+  };
+  const achievementRate = calculateAchievementRate();
 
   const kpiColor = getKPIColor();
 
