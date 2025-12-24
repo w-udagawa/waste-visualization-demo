@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* marumie Primary Colors */
+  --color-primary-50: #E3F2FD;
+  --color-primary-100: #BBDEFB;
+  --color-primary-200: #90CAF9;
+  --color-primary-300: #64B5F6;
+  --color-primary-400: #42A5F5;
+  --color-primary-500: #2196F3;
+  --color-primary-600: #1E88E5;
+  --color-primary-700: #1976D2;
+  --color-primary-800: #1565C0;
+  --color-primary-900: #0D47A1;
+
+  /* marumie Success Colors */
+  --color-success-50: #E8F5E9;
+  --color-success-100: #C8E6C9;
+  --color-success-300: #81C784;
+  --color-success-500: #4CAF50;
+  --color-success-700: #388E3C;
+  --color-success-900: #1B5E20;
+
+  /* marumie Warning Colors */
+  --color-warning-50: #FFF3E0;
+  --color-warning-100: #FFE0B2;
+  --color-warning-300: #FFB74D;
+  --color-warning-500: #FF9800;
+  --color-warning-700: #F57C00;
+  --color-warning-900: #E65100;
+
+  /* marumie Danger Colors */
+  --color-danger-50: #FFEBEE;
+  --color-danger-100: #FFCDD2;
+  --color-danger-300: #EF5350;
+  --color-danger-500: #F44336;
+  --color-danger-700: #D32F2F;
+  --color-danger-900: #B71C1C;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* marumie Theme Colors */
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+
+  --color-success-50: var(--color-success-50);
+  --color-success-100: var(--color-success-100);
+  --color-success-300: var(--color-success-300);
+  --color-success-500: var(--color-success-500);
+  --color-success-700: var(--color-success-700);
+  --color-success-900: var(--color-success-900);
+
+  --color-warning-50: var(--color-warning-50);
+  --color-warning-100: var(--color-warning-100);
+  --color-warning-300: var(--color-warning-300);
+  --color-warning-500: var(--color-warning-500);
+  --color-warning-700: var(--color-warning-700);
+  --color-warning-900: var(--color-warning-900);
+
+  --color-danger-50: var(--color-danger-50);
+  --color-danger-100: var(--color-danger-100);
+  --color-danger-300: var(--color-danger-300);
+  --color-danger-500: var(--color-danger-500);
+  --color-danger-700: var(--color-danger-700);
+  --color-danger-900: var(--color-danger-900);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* marumie Utility Classes */
+.bg-primary {
+  background-color: var(--color-primary-500);
+}
+
+.text-primary {
+  color: var(--color-primary-500);
+}
+
+.bg-success {
+  background-color: var(--color-success-500);
+}
+
+.text-success {
+  color: var(--color-success-500);
+}
+
+.bg-warning {
+  background-color: var(--color-warning-500);
+}
+
+.text-warning {
+  color: var(--color-warning-500);
+}
+
+.bg-danger {
+  background-color: var(--color-danger-500);
+}
+
+.text-danger {
+  color: var(--color-danger-500);
+}

@@ -1,0 +1,4 @@
+id,code,name,branch_id,construction_type,start_date,end_date,construction_amount,status
+site_company,SITE_COMPANY,全社 2024年度集計,branch_company,集計,2024-04-01,2025-03-31,,active
+site_civil,SITE_CIVIL,土木部門 2024年度集計,branch_civil,集計,2024-04-01,2025-03-31,,active
+site_building,SITE_BUILDING,建築部門 2024年度集計,branch_building,集計,2024-04-01,2025-03-31,,active
